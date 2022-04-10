@@ -184,4 +184,10 @@ test-wordladder:
     changes:
       - wordladder/*
 
+test-all:
+  image: golang:1.17
+  script:
+    - make test
+
+
 

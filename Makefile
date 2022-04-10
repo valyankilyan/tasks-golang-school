@@ -1,3 +1,8 @@
+.PONY: test
+test-anagram:
+	go test ./...
+
+
 .PONY: test-anagram
 test-anagram:
 	cd anagram && go test ./...
