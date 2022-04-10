@@ -1,5 +1,5 @@
 .PONY: test
-test-anagram:
+test:
 	go test ./...
 
 
