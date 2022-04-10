@@ -149,16 +149,6 @@ test-snowflakes:
     changes:
       - snowflakes/*
 
-
-test-spiral:
-  image: golang:1.17
-  script:
-    - make test-spiral
-  only:
-    changes:
-      - spiral/*
-
-
 test-sumdecimal:
   image: golang:1.17
   script:
