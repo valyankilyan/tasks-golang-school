@@ -33,7 +33,7 @@ test-functionfrequency:
 
 .PHONY: test-jaro
 test-jaro:
-	cd anagram && go test ./...
+	cd jaro && go test ./...
 
 .PHONY: test-lastlettergame
 test-lastlettergame:
