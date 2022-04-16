@@ -166,7 +166,7 @@ test-warriors:
     changes:
       - warriors/*
 
-t est-wordladder:
+test-wordladder:
   image: golang:1.17
   script:
     - make test-wordladder
