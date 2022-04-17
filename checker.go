@@ -40,8 +40,7 @@ func main() {
 	dirs := make([]string, 0, len(files))
 	for _, f := range files {
 		if f.IsDir() {
-			log.Printf("%v", f.Name())
-			if _, err := os.Stat(f.Name() + "/README.MD"); err == nil {
+			if _, err := os.Stat(f.Name() + "/README.md"); err == nil {
 				dirs = append(dirs, f.Name())
 			}
 		}
