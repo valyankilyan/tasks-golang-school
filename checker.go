@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"io/ioutil"
 	"log"
 	"os"
@@ -51,11 +50,11 @@ func main() {
 		cmd := exec.Command("go", "test", "./...")
 		cmd.Dir = dir
 		out, err := cmd.Output()
-		fmt.Println(string(out))
+		log.Println(string(out))
 		if err == nil {
 			result[dir] = struct{}{}
 		} else {
-			fmt.Println(err)
+			log.Println(err)
 		}
 	}
 
@@ -63,11 +62,13 @@ func main() {
 	for _, dir := range dirs {
 		if _, ok := result[dir]; ok {
 			points++
-			fmt.Printf("%s Task %s is OK %s\n", Green, dir, Reset)
+			log.Printf("%s Task %s is OK %s\n", Green, dir, Reset)
 		} else {
-			fmt.Printf("%s Task %s is FAIL %s\n", Red, dir, Reset)
+			log.Printf("%s Task %s is FAIL %s\n", Red, dir, Reset)
 		}
 	}
 
-	fmt.Printf("Completed %d/%d\n", points, 20)
+
+
+	log.Printf("Completed %d/%d\n", points, 20)
 }
