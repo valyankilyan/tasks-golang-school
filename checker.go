@@ -72,4 +72,8 @@ func main() {
 	}
 
 	log.Printf("Completed %d/%d\n", points, 20)
+
+	if points != 20 {
+		os.Exit(1)
+	}
 }
