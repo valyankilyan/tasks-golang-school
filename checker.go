@@ -40,7 +40,6 @@ func main() {
 	dirs := make([]string, 0, len(files))
 	for _, f := range files {
 		if f.IsDir() {
-			fmt.Println(f.Name())
 			if _, err := os.Stat(f.Name() + "/README.MD"); err == nil {
 				dirs = append(dirs, f.Name())
 			}
@@ -55,6 +54,8 @@ func main() {
 		fmt.Println(string(out))
 		if err == nil {
 			result[dir] = struct{}{}
+		} else {
+			fmt.Println(err)
 		}
 	}
 
