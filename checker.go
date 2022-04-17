@@ -36,7 +36,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	log.Println(files)
+	log.Printf("%v", files)
 	dirs := make([]string, 0, len(files))
 	for _, f := range files {
 		if f.IsDir() {
