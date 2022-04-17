@@ -62,12 +62,12 @@ func main() {
 	}
 
 	points := 0
-	for _, dir := range dirs {
+	for idx, dir := range dirs {
 		if _, ok := result[dir]; ok {
 			points++
-			log.Printf("%s Task %s is OK %s\n", Green, dir, Reset)
+			log.Printf("%d. %sTask %s is OK %s\n", Green, dir, Reset)
 		} else {
-			log.Printf("%s Task %s is FAIL %s\n", Red, dir, Reset)
+			log.Printf("%d. %sTask %s is FAIL %s\n", Red, dir, Reset)
 		}
 	}
 
