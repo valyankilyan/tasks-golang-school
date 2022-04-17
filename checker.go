@@ -45,6 +45,8 @@ func main() {
 		}
 	}
 
+	log.Println(dirs)
+
 	result := make(map[string]struct{})
 	for _, dir := range dirs {
 		cmd := exec.Command("go", "test", "./...")
@@ -67,8 +69,6 @@ func main() {
 			log.Printf("%s Task %s is FAIL %s\n", Red, dir, Reset)
 		}
 	}
-
-
 
 	log.Printf("Completed %d/%d\n", points, 20)
 }
