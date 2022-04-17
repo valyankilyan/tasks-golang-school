@@ -1,7 +1,7 @@
 test:
   image: golang:1.17
   script:
-    - go run checker.go
+    - bash -c "go run checker.go"
 
 
 
