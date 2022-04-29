@@ -36,7 +36,7 @@ go test -bench .
 - [x] Task floyd
 - [ ] Task functionfrequency
 - [ ] Task jaro
-- [ ] Task lastlettergame
+- [x] Task lastlettergame
 - [x]  Task mergesort
 - [x]  Task missingnumbers
 - [x]  Task node_degree
