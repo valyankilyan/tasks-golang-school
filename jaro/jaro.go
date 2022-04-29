@@ -30,13 +30,13 @@ func Distance(word1 string, word2 string) float64 {
 
 	max_dist := Max(len(word1), len(word2))/2 - 1
 	m2 := make([]int, len(word2))
-	match := 0
+	match := 0.0
 
 	for i := range word1 {
 		for j := Max(0, i-max_dist); j < Min(len(word2), i+max_dist+1); j++ {
 			if word1[i] == word2[j] && m2[j] == 0 {
 				match++
-				m2[j] = match
+				m2[j] = int(match)
 				break
 			}
 		}
@@ -46,7 +46,7 @@ func Distance(word1 string, word2 string) float64 {
 		return 0.0
 	}
 
-	t, order := 0, 0
+	t, order := 0.0, 0
 	for _, a := range m2 {
 		if a != 0 {
 			order++
@@ -56,7 +56,7 @@ func Distance(word1 string, word2 string) float64 {
 		}
 	}
 
-	return (float64(match)/float64(len(word1)) +
-		float64(match)/float64(len(word2)) +
-		(float64(match)-float64(t)/2.0)/float64(match)) / 3.0
+	return (match/float64(len(word1)) +
+		match/float64(len(word2)) +
+		(match-t/2.0)/match) / 3.0
 }
