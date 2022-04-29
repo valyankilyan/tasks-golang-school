@@ -3,7 +3,6 @@ package lastlettergame
 var graph [][]int
 var was []bool
 var max_depth int
-var wassed, unwassed int
 
 // Здесь показалось уместным указывать переменную, которую возвращаю,
 // потому что по контексту сразу понятно, что делает дфс
@@ -11,7 +10,7 @@ func Dfs(depth, v int) (path []int) {
 	was[v] = true
 	// Ругается, что нельзя в дефере сделать ничего кроме вызова функции (как я понял)
 	// Не знаю, насколько то, что я сделал - нормальная практика..
-	defer func(v int) { was[v] = false; unwassed++ }(v)
+	defer func(v int) { was[v] = false }(v)
 	for _, u := range graph[v] {
 		if !was[u] {
 			if p := Dfs(depth+1, u); len(p) != 0 {
