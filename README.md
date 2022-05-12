@@ -37,15 +37,15 @@ go test -bench .
 - [ ] Task functionfrequency
 - [ ] Task jaro
 - [x] Task lastlettergame
-- [x]  Task mergesort
-- [x]  Task missingnumbers
-- [x]  Task node_degree
-- [x]  Task reverseparentheses
-- [ ]  Task romannumerals
-- [ ]  Task secretmessage
-- [ ]  Task shorthash
-- [ ]  Task snowflakes
-- [ ]  Task sumdecimal
-- [ ]  Task warriors
-- [ ]  Task wordladder
+- [x] Task mergesort
+- [x] Task missingnumbers
+- [x] Task node_degree
+- [x] Task reverseparentheses
+- [ ] Task romannumerals
+- [x] Task secretmessage
+- [ ] Task shorthash
+- [ ] Task snowflakes
+- [ ] Task sumdecimal
+- [ ] Task warriors
+- [ ] Task wordladder
 
