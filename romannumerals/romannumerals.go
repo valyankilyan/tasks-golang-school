@@ -83,15 +83,57 @@ func Decode(s string) (int, bool) {
 	return ans, err == nil
 }
 
-func FindRoman(decimal int) (rune, error) {
-	for _, num := range numerals {
-		if num.decimal == decimal {
-			return num.roman, nil
+func FindMaxIndexRoman(decimal int) (int, error) {
+	ind := 0
+	for i, num := range numerals {
+		if num.decimal <= decimal {
+			ind = i
 		}
 	}
-	return 0, fmt.Errorf("can't find roman")
+
+	return ind, nil
+}
+
+func EncodeSlice(decimal int) ([]rune, error) {
+	if decimal == 0 {
+		return []rune{}, nil
+	}
+
+	mxind, err := FindMaxIndexRoman(decimal)
+	if err != nil {
+		return []rune{}, err
+	}
+
+	mxlen := decimal / numerals[mxind].decimal
+	if mxlen == 4 && mxind != len(numerals)-1 {
+		ap, err := EncodeSlice(decimal + numerals[mxind].decimal)
+		if err != nil {
+			return []rune{}, err
+		}
+		return append([]rune{numerals[mxind].roman}, ap...), nil
+	} else {
+		ap, err := EncodeSlice(decimal % numerals[mxind].decimal)
+		if err != nil {
+			return []rune{}, err
+		}
+
+		cur := make([]rune, mxlen)
+		for i := 0; i < mxlen; i++ {
+			cur[i] = numerals[mxind].roman
+		}
+
+		return append(cur, ap...), nil
+	}
 }
 
 func Encode(n int) (string, bool) {
-	return "", false
+	if n <= 0 {
+		return "", false
+	}
+
+	ans, err := EncodeSlice(n)
+	if err != nil {
+		return "", false
+	}
+	return string(ans), true
 }
