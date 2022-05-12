@@ -4,7 +4,7 @@ import (
 	"strings"
 )
 
-func Max(a, b int) int {
+func max(a, b int) int {
 	if a > b {
 		return a
 	} else {
@@ -12,7 +12,7 @@ func Max(a, b int) int {
 	}
 }
 
-func Min(a, b int) int {
+func min(a, b int) int {
 	if a < b {
 		return a
 	} else {
@@ -28,12 +28,12 @@ func Distance(word1 string, word2 string) float64 {
 		return 1.0
 	}
 
-	max_dist := Max(len(word1), len(word2))/2 - 1
+	max_dist := max(len(word1), len(word2))/2 - 1
 	m2 := make([]int, len(word2))
 	match := 0.0
 
 	for i := range word1 {
-		for j := Max(0, i-max_dist); j < Min(len(word2), i+max_dist+1); j++ {
+		for j := max(0, i-max_dist); j < min(len(word2), i+max_dist+1); j++ {
 			if word1[i] == word2[j] && m2[j] == 0 {
 				match++
 				m2[j] = int(match)
