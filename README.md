@@ -41,7 +41,7 @@ go test -bench .
 - [x]  Task missingnumbers
 - [x]  Task node_degree
 - [x]  Task reverseparentheses
-- [ ]  Task romannumerals
+- [x]  Task romannumerals
 - [ ]  Task secretmessage
 - [ ]  Task shorthash
 - [ ]  Task snowflakes
