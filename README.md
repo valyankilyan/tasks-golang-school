@@ -29,7 +29,7 @@ go test -bench .
 ## Solved
 
 - [x] Task anagram
-- [ ] Task brokennode
+- [x] Task brokennode
 - [x] Task buildword
 - [x] Task chess
 - [x] Task coins
