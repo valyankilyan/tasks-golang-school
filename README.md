@@ -43,7 +43,7 @@ go test -bench .
 - [x]  Task reverseparentheses
 - [ ]  Task romannumerals
 - [ ]  Task secretmessage
-- [ ]  Task shorthash
+- [x]  Task shorthash
 - [ ]  Task snowflakes
 - [ ]  Task sumdecimal
 - [ ]  Task warriors
