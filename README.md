@@ -46,5 +46,5 @@ go test -bench .
 - [x]  Task shorthash
 - [ ]  Task snowflakes
 - [ ]  Task sumdecimal
-- [ ]  Task warriors
+- [x]  Task warriors
 - [x]  Task wordladder
