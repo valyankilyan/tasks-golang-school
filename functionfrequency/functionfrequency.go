@@ -1,49 +1,51 @@
 package functionfrequency
 
+// regex howabout
+// - find all positions of quotes
+// - find all positions of structures like "[a-zA-Z.]("
+// - then somehow determine if it was an actual call (doesn't have func before)
+// - but there is lambda func which looks like func () {} or smth
+// - well we could what?? okay
+
+// scanner??
+// - remove text in quotes
+// - remove func*()
+// - find all the [a-zA-Z.]( and remove (
+
 import (
+	"bufio"
 	"fmt"
-	"io"
+	"strings"
 )
 
-type frequency map[string]int
-type flow []byte
+type Stack []int
 
-func (f *flow) ReadLine() ([]byte, error) {
-	if len(*f) == 0 {
-		return []byte{}, io.EOF
-	}
-	next_line := 0
-	for (*f)[next_line] != '\n' {
-		next_line++
-	}
-	ans := (*f)[:next_line]
-	*f = (*f)[next_line+1:]
-	return ans, nil
+func NewStack() Stack {
+	q := Stack(make([]int, 0, 1))
+	return q
 }
 
-// func FuncFinder() return func (freq *frequency) (line []byte{
-// 	in_quotes := false
+func (q *Stack) Push(a ...int) {
+	*q = append(*q, a...)
+}
 
-// }
+func (q *Stack) Pop() int {
+	var ans int
+	ans, *q = (*q)[len(*q)-1], (*q)[:len(*q)-1]
+	return ans
+}
 
-// func (freq *frequency) FindFunc(line []byte) {
-// 	if bytes.HasPrefix(line, []byte("func ")) {
-// 		return
-// 	}
-// 	func_names := make([]string, 0)
-// 	last_left_
+// func IsQuote(a byte) bool {
 
 // }
 
 func FunctionFrequency(gocode []byte) []string {
-	var f flow = gocode
-	var freq frequency = make(map[string]int)
-	for {
-		b, err := f.ReadLine()
-		if err == io.EOF {
-			break
-		}
-		fmt.Println(string(b))
+	scanner := bufio.NewScanner(strings.NewReader(string(gocode)))
+	scanner.Split(bufio.ScanWords)
+	for scanner.Scan() {
+		fmt.Println(scanner.Text())
 	}
+	// inQuotes, lastWord, leftBraces := false, []byte{}, NewStack()
+	// strings.
 	return []string{}
 }
