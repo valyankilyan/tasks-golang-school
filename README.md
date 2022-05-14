@@ -29,14 +29,15 @@ go test -bench .
 ## Solved
 
 - [x] Task anagram
-- [ ] Task brokennode
+- [x] Task brokennode
 - [x] Task buildword
 - [x] Task chess
 - [x] Task coins
 - [x] Task floyd
 - [ ] Task functionfrequency
-- [ ] Task jaro
+- [x] Task jaro
 - [x] Task lastlettergame
+<<<<<<< README.md
 - [x] Task mergesort
 - [x] Task missingnumbers
 - [x] Task node_degree
@@ -48,4 +49,17 @@ go test -bench .
 - [ ] Task sumdecimal
 - [ ] Task warriors
 - [ ] Task wordladder
+=======
+- [x]  Task mergesort
+- [x]  Task missingnumbers
+- [x]  Task node_degree
+- [x]  Task reverseparentheses
+- [x]  Task romannumerals
+- [x]  Task secretmessage
+- [x]  Task shorthash
+- [ ]  Task snowflakes
+- [ ]  Task sumdecimal
+- [ ]  Task warriors
+- [x]  Task wordladder
+>>>>>>> README.md
 
