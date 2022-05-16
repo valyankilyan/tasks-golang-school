@@ -29,23 +29,22 @@ go test -bench .
 ## Solved
 
 - [x] Task anagram
-- [ ] Task brokennode
+- [x] Task brokennode
 - [x] Task buildword
 - [x] Task chess
 - [x] Task coins
 - [x] Task floyd
-- [x] Task functionfrequency
-- [ ] Task jaro
-- [ ] Task lastlettergame
+- [ ] Task functionfrequency
+- [x] Task jaro
+- [x] Task lastlettergame
 - [x]  Task mergesort
 - [x]  Task missingnumbers
 - [x]  Task node_degree
 - [x]  Task reverseparentheses
-- [ ]  Task romannumerals
-- [ ]  Task secretmessage
-- [ ]  Task shorthash
+- [x]  Task romannumerals
+- [x]  Task secretmessage
+- [x]  Task shorthash
 - [ ]  Task snowflakes
 - [ ]  Task sumdecimal
-- [ ]  Task warriors
-- [ ]  Task wordladder
-
+- [x]  Task warriors
+- [x]  Task wordladder
