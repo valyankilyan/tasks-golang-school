@@ -34,7 +34,7 @@ go test -bench .
 - [x] Task chess
 - [x] Task coins
 - [x] Task floyd
-- [ ] Task functionfrequency
+- [x] Task functionfrequency
 - [ ] Task jaro
 - [ ] Task lastlettergame
 - [x]  Task mergesort
