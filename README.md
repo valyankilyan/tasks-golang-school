@@ -44,7 +44,7 @@ go test -bench .
 - [x]  Task romannumerals
 - [x]  Task secretmessage
 - [x]  Task shorthash
-- [ ]  Task snowflakes
+- [x]  Task snowflakes
 - [ ]  Task sumdecimal
 - [x]  Task warriors
 - [x]  Task wordladder
