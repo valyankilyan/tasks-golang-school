@@ -34,7 +34,7 @@ go test -bench .
 - [x] Task chess
 - [x] Task coins
 - [x] Task floyd
-- [ ] Task functionfrequency
+- [x] Task functionfrequency
 - [x] Task jaro
 - [x] Task lastlettergame
 - [x]  Task mergesort
@@ -45,6 +45,6 @@ go test -bench .
 - [x]  Task secretmessage
 - [x]  Task shorthash
 - [x]  Task snowflakes
-- [ ]  Task sumdecimal
+- [x]  Task sumdecimal
 - [x]  Task warriors
 - [x]  Task wordladder

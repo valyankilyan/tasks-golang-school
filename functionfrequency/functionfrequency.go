@@ -16,6 +16,22 @@ import (
 // - remove func*()
 // - find all the [a-zA-Z.]( and remove (
 
+var vartypes []string = []string{
+	"int8",
+	"int16",
+	"int32",
+	"int64",
+	"uint8",
+	"uint16",
+	"uint32",
+	"uint64",
+	"int",
+	"uint",
+	"rune",
+	"byte",
+	"uintptr",
+}
+
 type Stack []int
 
 func NewStack() Stack {
@@ -78,9 +94,21 @@ func InDeclaration(lastWord []byte, declaration *bool, cur byte) bool {
 	}
 	return *declaration
 }
+
+func IsVarType(word []byte) bool {
+	strword := string(word)
+	for _, v := range vartypes {
+		if v == strword {
+			return true
+		}
+	}
+	return false
+}
+
 func IsFunction(lastWord []byte, cur byte) bool {
 	if len(lastWord) != 0 &&
 		lastWord[len(lastWord)-1] != '.' &&
+		!IsVarType(lastWord) &&
 		cur == '(' {
 		return true
 	} else {
